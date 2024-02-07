@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package bolanos.common.v2;
+
+option java_package = "org.bolanos.common.v2";
+option java_multiple_files = true;
+
+import "common/v1/type.proto";
+
+//v2
+message Television {
+  string brand = 1;
+  int32 year = 2;
+  common.v1.Type type = 3;
+}
+

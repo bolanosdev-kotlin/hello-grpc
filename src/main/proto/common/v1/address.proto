@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package bolanos.common.v1;
+
+option java_package = "org.bolanos.common.v1";
+option java_multiple_files = true;
+
+message Address {
+  int32 postbox = 1;
+  string street = 2;
+  string city = 3;
+}
+

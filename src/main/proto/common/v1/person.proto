@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package bolanos.common.v1;
+
+option java_package = "org.bolanos.common.v1";
+option java_multiple_files = true;
+
+import "common/v1/car.proto";
+import "common/v1/address.proto";
+
+message Person {
+  string name = 1;
+  int32 age = 2;
+  Address address = 3;
+  repeated Car car = 4;
+}

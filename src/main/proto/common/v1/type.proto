@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package bolanos.common.v1;
+
+option java_package = "org.bolanos.common.v1";
+option java_multiple_files = true;
+
+enum Type {
+  HD = 0;
+  UHD = 1;
+  OLED = 2;
+}

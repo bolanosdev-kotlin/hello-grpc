@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package bolanos.common.v1;
+
+option java_package = "org.bolanos.common.v1";
+option java_multiple_files = true;
+
+import "common/v1/car.proto";
+
+message Dealer {
+  map<int32, Car> model = 1;
+}

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package bolanos.domain.v1;
+
+option java_package = "org.bolanos.domain.v1";
+option java_multiple_files = true;
+import "common/v1/person.proto";
+
+message Context {
+  string baz = 1;
+  string zab = 2;
+  common.v1.Person person = 3;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package bolanos.common.v1;
+
+option java_package = "org.bolanos.common.v1";
+option java_multiple_files = true;
+
+import "common/v1/body_style.proto";
+
+message Car {
+  string make = 1;
+  string model = 2;
+  int32 year = 3;
+  BodyStyle body_style = 4;
+}
