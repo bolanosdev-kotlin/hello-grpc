@@ -1,11 +1,11 @@
-package org.bolanos.grpc.services
+package dev.bolanos.grpc.services
 
 import io.grpc.stub.StreamObserver
-import org.bolanos.domain.v1.Balance
-import org.bolanos.domain.v1.BalanceAddRequest
-import org.bolanos.domain.v1.BalanceCheckRequest
-import org.bolanos.domain.v1.BalanceDeductRequest
-import org.bolanos.domain.v1.BankServiceGrpc
+import dev.bolanos.v1.common.Balance
+import dev.bolanos.v1.services.BalanceAddRequest
+import dev.bolanos.v1.services.BalanceCheckRequest
+import dev.bolanos.v1.services.BalanceDeductRequest
+import dev.bolanos.v1.services.BankServiceGrpc
 
 
 class BankService : BankServiceGrpc.BankServiceImplBase() {

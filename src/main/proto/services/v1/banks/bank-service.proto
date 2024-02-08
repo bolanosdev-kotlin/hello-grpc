@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package dev.bolanos.v1.services;
+
+option java_package = "dev.bolanos.v1.services";
+option java_multiple_files = true;
+
+import "common/v1/balance.proto";
+message BalanceCheckRequest {
+  int32 account_number = 1;
+}
+
+message BalanceAddRequest {
+  int32 account_number = 1;
+  int32 amount =2;
+}
+
+message BalanceDeductRequest {
+  int32 account_number = 1;
+  int32 amount =2;
+}
+
+service BankService {
+  rpc get_balance(BalanceCheckRequest) returns (dev.bolanos.v1.common.Balance) {};
+  rpc add_balance(BalanceAddRequest) returns(dev.bolanos.v1.common.Balance){};
+  rpc deduct_balance(BalanceDeductRequest) returns (dev.bolanos.v1.common.Balance) {};
+}

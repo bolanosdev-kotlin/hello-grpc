@@ -1,8 +1,8 @@
-package org.bolanos.grpc.services
+package dev.bolanos.grpc.services
 
-import org.bolanos.common.v1.Address
-import org.bolanos.domain.v1.Context
-import org.bolanos.domain.v1.Domain
+//import dev.bolanos.v1.common.Address
+import dev.bolanos.v1.common.Context
+import dev.bolanos.v1.common.Domain
 import org.springframework.stereotype.Service
 
 @Service

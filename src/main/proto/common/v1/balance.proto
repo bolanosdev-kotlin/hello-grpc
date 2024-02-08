@@ -5,8 +5,7 @@ package dev.bolanos.v1.common;
 option java_package = "dev.bolanos.v1.common";
 option java_multiple_files = true;
 
-import "common/v1/car.proto";
-
-message Dealer {
-  map<int32, Car> model = 1;
+message Balance {
+  int32 account = 1;
+  int32 amount = 2;
 }

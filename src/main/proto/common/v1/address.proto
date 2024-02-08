@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package bolanos.common.v1;
+package dev.bolanos.v1.common;
 
-option java_package = "org.bolanos.common.v1";
+option java_package = "dev.bolanos.v1.common";
 option java_multiple_files = true;
 
 message Address {

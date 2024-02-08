@@ -1,6 +1,6 @@
-package org.bolanos.grpc.services
+package dev.bolanos.grpc.services
 
-import org.bolanos.domain.v1.Balance
+import dev.bolanos.v1.common.Balance
 
 class AccountDatabase {
     private val database: MutableMap<Int, Int> = (1..100).associateWith {

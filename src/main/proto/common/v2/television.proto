@@ -1,8 +1,9 @@
 syntax = "proto3";
 
-package bolanos.common.v2;
+package dev.bolanos.v2.common;
 
-option java_package = "org.bolanos.common.v2";
+option java_package = "dev.bolanos.v2.common";
+
 option java_multiple_files = true;
 
 import "common/v1/type.proto";
@@ -11,6 +12,6 @@ import "common/v1/type.proto";
 message Television {
   string brand = 1;
   int32 year = 2;
-  common.v1.Type type = 3;
+  dev.bolanos.v1.common.Type type = 3;
 }
 

@@ -1,9 +1,9 @@
-package org.bolanos.grpc
+package dev.bolanos.grpc
 
 import io.grpc.ServerBuilder
-import org.bolanos.common.v1.Person
-import org.bolanos.domain.v1.Context
-import org.bolanos.grpc.services.BankService
+import dev.bolanos.v1.common.Person
+import dev.bolanos.v1.common.Context
+import dev.bolanos.grpc.services.BankService
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
