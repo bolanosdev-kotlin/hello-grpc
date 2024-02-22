@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
-  build-and-test:
-    name: Build Project & Upload Artifacts
+  deploy:
+    name: build project & upload artifacts
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
