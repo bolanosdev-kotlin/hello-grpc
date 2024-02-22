@@ -15,10 +15,10 @@ concurrency:
 
 jobs:
   build-and-test:
-    name: Build & Test
+    name: build & test
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
@@ -28,15 +28,13 @@ jobs:
         with:
           credentials_json: '${{ secrets.GCLOUD_ACCOUNT_KEY }}'
 
-      - name: 'Set up Cloud SDK'
+      - name: 'set up cloud sdk'
         uses: 'google-github-actions/setup-gcloud@v2'
-        with:
-          version: '>= 363.0.0'
 
-      - name: 'Use gcloud CLI'
+      - name: 'use gcloud cli'
         run: 'gcloud info'
 
-      - name: Set up JDK
+      - name: set up jdk
         uses: actions/setup-java@v2
         with:
           java-version: 17
@@ -44,6 +42,5 @@ jobs:
           overwrite-settings: false
           cache: maven
 
-      - name: Maven Build & Tests
-        run: |
-          mvn --batch-mode --no-transfer-progress -U clean verify
+      - name: maven build & tests
+        run:  mvn --batch-mode --no-transfer-progress -U clean verify
