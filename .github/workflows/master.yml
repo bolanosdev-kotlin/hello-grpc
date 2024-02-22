@@ -30,3 +30,6 @@ jobs:
           
           # build and test the code
           mvn --batch-mode --no-transfer-progress -U clean package
+
+      - name: docker build
+        uses: docker/setup-buildx-action@v3
