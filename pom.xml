@@ -30,14 +30,14 @@
     <distributionManagement>
         <snapshotRepository>
             <id>artifact-registry</id>
-            <url>artifactregistry://us-west2-maven.pkg.dev/garrison-298703/bolanos-dev-snapshot</url>
+            <url>artifactregistry://us-west2-maven.pkg.dev/garrison-298703/bolanos-dev-mvn-snapshot</url>
         </snapshotRepository>
     </distributionManagement>
 
     <repositories>
         <repository>
             <id>artifact-registry</id>
-            <url>artifactregistry://us-west2-maven.pkg.dev/garrison-298703/bolanos-dev-snapshot</url>
+            <url>artifactregistry://us-west2-maven.pkg.dev/garrison-298703/bolanos-dev-mvn-snapshot</url>
             <releases>
                 <enabled>false</enabled>
             </releases>

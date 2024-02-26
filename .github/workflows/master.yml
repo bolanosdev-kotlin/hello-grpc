@@ -8,7 +8,7 @@ on:
 env:
   PROJECT_ID: garrison-298703
   REGION: us-west2
-  GAR_LOCATION: us-west2-docker.pkg.dev/garrison-298703/bolanos-dev-docker
+  GAR_LOCATION: us-west2-docker.pkg.dev/garrison-298703/bolanos-dev-docker-snapshot
 
 jobs:
   deploy:
@@ -20,13 +20,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - id: 'auth'
-        uses: 'google-github-actions/auth@v2'
+      - id: "auth"
+        uses: "google-github-actions/auth@v2"
         with:
-          credentials_json: '${{ secrets.GCLOUD_ACCOUNT_KEY }}'
+          credentials_json: "${{ secrets.GCLOUD_ACCOUNT_KEY }}"
 
-      - name: 'set up cloud sdk'
-        uses: 'google-github-actions/setup-gcloud@v2'
+      - name: "set up cloud sdk"
+        uses: "google-github-actions/setup-gcloud@v2"
 
       - name: "docker auth"
         run: gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev --quiet
@@ -35,7 +35,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: 17
-          distribution: 'adopt'
+          distribution: "adopt"
           overwrite-settings: false
           cache: maven
 
